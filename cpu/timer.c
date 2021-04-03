@@ -8,10 +8,10 @@ interval f. f is generally set to 100Hz(once every 10 milliseconds). To do this,
 a divisor.
 */
 
-#include "timer.h"
-#include "isr.h"
-#include "../drivers/display.h"
-#include "../utils/common.h"
+#include "../includes/timer.h"
+#include "../includes/isr.h"
+#include "../includes/display.h"
+#include "../includes/common.h"
 
 u32int tick = 0;
 

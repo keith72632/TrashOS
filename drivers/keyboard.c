@@ -1,8 +1,8 @@
-#include "../utils/common.h"
-#include "../cpu/isr.h"
-#include "display.h"
-#include "../cpu/timer.h"
-#include "../utils/shell_funcs.h"
+#include "../includes/common.h"
+#include "../includes/isr.h"
+#include "../includes/display.h"
+#include "../includes/timer.h"
+#include "../includes/shell_funcs.h"
 
 #define ENTER 0x1C
 #define TAB 0x0F

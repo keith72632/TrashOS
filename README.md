@@ -1,4 +1,4 @@
-SnowOs
+TrashOs
     This project started out as a simple botloader for the purpose of learning. I am slowly adding kernel functionailty and drivers.
 
 Bootloader
@@ -79,3 +79,5 @@ All Sources
         https://riptutorial.com/c/example/31818/typedef-for-function-pointers
     Additional Learning:
         http://himmele.blogspot.com/2011/07/build-your-own-operating-system.html
+    Paging:
+        http://www.jamesmolloy.co.uk/tutorial_html/6.-Paging.html

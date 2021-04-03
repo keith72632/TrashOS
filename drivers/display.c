@@ -1,5 +1,5 @@
-#include "display.h"
-#include "../utils/common.h"
+#include "../includes/display.h"
+#include "../includes/common.h"
 
 /*
 get_cursor and set_cursor manipulate the display controllers register via I/O ports

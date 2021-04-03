@@ -4,7 +4,7 @@
 // Rewritten for JamesM's kernel development tutorials.
 //
 
-#include "../utils/common.h"
+#include "../includes/common.h"
 
 typedef struct registers
 {

@@ -1,6 +1,6 @@
-#include "isr.h"
-#include "../drivers/display.h"
-#include "timer.h"
+#include "../includes/isr.h"
+#include "../includes/display.h"
+#include "../includes/timer.h"
 
 /* To print the message which defines every exception */
 char *exception_messages[] = {

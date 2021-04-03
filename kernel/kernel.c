@@ -1,14 +1,13 @@
 #include <stdbool.h>
 #include <stddef.h>
-#include "../utils/common.h"
-#include "../drivers/display.h"
-#include "kernel.h"
-#include "../cpu/gdt.h"
-#include "../utils/common.h"
-#include "../cpu/isr.h"
-#include "../cpu/timer.h"
-#include "../drivers/keyboard.h"
-#include "../utils/banner.h"
+#include "../includes/display.h"
+#include "../includes/kernel.h"
+#include "../includes/gdt.h"
+#include "../includes/common.h"
+#include "../includes/isr.h"
+#include "../includes/timer.h"
+#include "../includes/keyboard.h"
+#include "../includes/banner.h"
 
 /* Check if the compiler thinks you are targeting the wrong operating system. */
 #if defined(__linux__)

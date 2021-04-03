@@ -7,11 +7,10 @@
  *Segmentation is slowly becoming obsolete.x86-64 requires flat mem model(base 0 - 0xffffffffff)
  *Segmentation allows for the setting of ring levels*/
 
-#include "../utils/common.h"
-#include "gdt.h"
-#include "idt.h"
-#include "../utils/common.h"
-#include "isr.h"
+#include "../includes/common.h"
+#include "../includes/gdt.h"
+#include "../includes/idt.h"
+#include "../includes/isr.h"
 
 /* Defines a GDT entry.  We say packed, because it prevents the
  * compiler from doing things that it thinks is best, i.e.
