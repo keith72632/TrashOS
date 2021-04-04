@@ -4,10 +4,10 @@
 #include "../includes/kernel.h"
 #include "../includes/gdt.h"
 #include "../includes/common.h"
-#include "../includes/isr.h"
 #include "../includes/timer.h"
 #include "../includes/keyboard.h"
 #include "../includes/banner.h"
+#include "../includes/paging.h"
 
 /* Check if the compiler thinks you are targeting the wrong operating system. */
 #if defined(__linux__)
@@ -35,6 +35,10 @@ void kernel_main(void)
 	
 	init_keyboard();
 
+	initialize_paging();
+	//testing 
+	u32int *ptr = (u32int*)0xA0000000;
+	u32int do_page_fault = *ptr;
 	/*Loops cpu*/
 	cpu_continue();
 }

@@ -38,7 +38,9 @@ kheap.o: paging/kheap.c
 	${CC} -c $^ -o $@ ${FLAGS}
 shell_funcs.o: utils/shell_funcs.c
 	${CC} -c $^ -o $@ ${FLAGS}
-os-image.bin: boot.o gdt.o idt_flush.o interrupts.o kernel.o drivers/display.o cpu/idt.o cpu/gdt.o cpu/isr.o timer.o common.o keyboard.o shell_funcs.o banner.o kheap.o ${HEADERS}
+paging.o: paging/paging.c
+	${CC} -c $^ -o $@ ${FLAGS}
+os-image.bin: boot.o gdt.o idt_flush.o interrupts.o kernel.o drivers/display.o cpu/idt.o cpu/gdt.o cpu/isr.o timer.o common.o keyboard.o shell_funcs.o banner.o kheap.o paging.o ${HEADERS}
 	${CC} -T linker.ld -o os-image.bin -ffreestanding -O2 -m32 -nostdlib $^ -lgcc
 os-image.iso: os-image.bin
 	cp os-image.bin isodir/boot/

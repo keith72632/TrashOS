@@ -30,4 +30,19 @@ typedef struct page_directory {
     be in a different location in virtual memory*/
 } page_directory_t;
 
+/*Sets up the environment, page directories etc and enables paging*/
+void initialize_paging();
+
+/*Causes the specified page directory to be loaded into the CR3 register*/
+void switch_page_directory(page_directory_t *neew);
+
+/*Retrives a pointer to the page required
+ *if make == 1, if the page_table in which this page should rside isn't created,
+ *then create it
+ */
+page_t *get_page(u32int address, int make, page_directory_t *dir);
+
+/*Hanlder for page fault*/
+void page_fault(registers_t regs);
+
 #endif
