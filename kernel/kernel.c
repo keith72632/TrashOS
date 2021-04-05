@@ -37,7 +37,7 @@ void kernel_main(void)
 
 	initialize_paging();
 	//testing 
-	u32int *ptr = (u32int*)0xA0000000;
+	u32int *ptr = (u32int*)0xA00000000000000000000000000;
 	u32int do_page_fault = *ptr;
 	/*Loops cpu*/
 	cpu_continue();

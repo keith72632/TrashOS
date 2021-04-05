@@ -46,7 +46,7 @@ void isr_handler(registers_t regs)
 {
    printk("\nrecieved interrupt: ");
    print_dec(regs.int_no);
-   printk(exception_messages[regs.int_no - 1]);
+   printk(exception_messages[regs.int_no]);
    printk('\n');
 }
 

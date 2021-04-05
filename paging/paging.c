@@ -17,6 +17,11 @@ page_directory_t *current_directory=0;
 #define OFFSET_FROM_BIT(a)(a%(8*4))
 #define PANIC(string)(printk)
 
+//Prototypes
+void switch_page_directory(page_directory_t *dir);
+page_t *get_page(u32int address, int make, page_directory_t *dir);
+void page_fault(registers_t regs);
+
 static void panic(char string[])
 {
     printk(string);
