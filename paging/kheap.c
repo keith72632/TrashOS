@@ -1,5 +1,5 @@
 #include "../includes/common.h"
-extern u32int end;
+extern end;
 u32int placement_address = (u32int)&end;
 /***********************************************************************************
  *                 Helper Functions for paging and memory managment                *
